@@ -31,5 +31,3 @@ while N-1 > 0 and M-1 > 0:
 result.reverse()
 for i in result:
     print(i, end = "")
-print()
-
