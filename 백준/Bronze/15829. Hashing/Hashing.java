@@ -11,13 +11,15 @@ public class Main {
         String input = sc.nextLine();
 
         double result = 0;
+        double num = 1;
+        final int MOD = 1234567891;
 
         for (int i = 0; i < L; i++) {
-            double num = ((int)input.charAt(i)-96) * Math.pow(31, i);
-            result += num;
+            result += ((int)input.charAt(i)-96) * num;
+            num = (num * 31) % MOD;
         }
 
-        double finalResult = result % 1234567891;
+        double finalResult = result % MOD;
 
         System.out.println((int)finalResult);
 
