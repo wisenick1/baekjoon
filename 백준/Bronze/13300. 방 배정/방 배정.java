@@ -18,11 +18,7 @@ public class Main {
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 7; j++) {
                 if (arr[i][j] != 0) {
-                    if (arr[i][j] % 2 == 1) {
-                        cnt += arr[i][j] / k + 1;
-                    } else {
-                        cnt += arr[i][j] / k;
-                    }
+                    cnt += (arr[i][j] + k - 1) / k;
                 }
             }
         }
