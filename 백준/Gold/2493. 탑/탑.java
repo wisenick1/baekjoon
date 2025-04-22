@@ -9,8 +9,6 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
-        int[] heights = new int[n + 1];
-
         Stack<int[]> stack = new Stack<>();
         List<Integer> list = new ArrayList<>();
 
