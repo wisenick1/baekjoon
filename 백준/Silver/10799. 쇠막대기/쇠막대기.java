@@ -1,23 +1,20 @@
-import java.util.Scanner;
-import java.util.Stack;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        char[] arr = br.readLine().toCharArray();
 
-        Stack<Character> stack = new Stack<>();
         int result = 0;
+        int stackSize = 0;
 
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-
-            if (ch == '(') {
-                stack.push(ch);
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == '(') {
+                stackSize++;
             } else {
-                stack.pop();
-                if (str.charAt(i - 1) == '(') {
-                    result += stack.size();
+                stackSize--;
+                if (arr[i - 1] == '(') {
+                    result += stackSize;
                 } else {
                     result += 1;
                 }
