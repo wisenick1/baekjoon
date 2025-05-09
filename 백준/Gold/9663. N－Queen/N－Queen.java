@@ -6,7 +6,6 @@ public class Main {
     static boolean[] isUsed1 = new boolean[15];
     static boolean[] isUsed2 = new boolean[30];
     static boolean[] isUsed3 = new boolean[30];
-    static int[][] arr = new int[15][15];
     static int cnt = 0;
 
     public static void main(String[] args) {
